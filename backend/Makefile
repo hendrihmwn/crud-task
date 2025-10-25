@@ -1,0 +1,3 @@
+test:
+	mkdir -p outputs
+	go test -v -race -coverprofile=outputs/cov.out ./...

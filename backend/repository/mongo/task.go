@@ -27,11 +27,16 @@ func ensureIndexes(ctx context.Context, coll *mongo.Collection) error {
 	indexes := coll.Indexes()
 	models := []mongo.IndexModel{
 		{
-			Keys: bson.D{{Key: "created_at", Value: -1}},
+			Keys:    bson.D{{Key: "created_at", Value: -1}},
+			Options: options.Index().SetName("idx_created_at"),
+		},
+		{
+			Keys:    bson.D{{Key: "status", Value: 1}},
+			Options: options.Index().SetName("idx_status"),
 		},
 		{
 			Keys:    bson.D{{Key: "title", Value: 1}},
-			Options: options.Index().SetBackground(true),
+			Options: options.Index().SetName("idx_tasks_title"),
 		},
 	}
 	_, err := indexes.CreateMany(ctx, models)

@@ -11,6 +11,8 @@ command = "cd backend && ./app"
 GIN_MODE = "release"
 MONGODB_URL = "${{ MONGODB_URL }}"
 JWT_SECRET = "${{ JWT_SECRET }}"
+DB_NAME = "${{ DB_NAME }}"
+COLLECTION_NAME = "${{ COLLECTION_NAME }}"
 
 [service.frontend]
 root = "frontend"

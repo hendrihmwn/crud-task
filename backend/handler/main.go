@@ -19,7 +19,7 @@ type MainInstance struct {
 }
 
 func InitHandler(router *gin.Engine, client *mongo.Client, config helper.Config) {
-	taskMongoRepository := mongo2.NewTaskRepository(client, "database", "tasks")
+	taskMongoRepository := mongo2.NewTaskRepository(client, config.DBName, config.CollectionName)
 	taskUseCase := usecase.NewTaskUseCase(taskMongoRepository)
 	authUseCase := usecase.NewAuthUseCase(config)
 

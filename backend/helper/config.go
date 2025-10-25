@@ -7,8 +7,10 @@ import (
 )
 
 type Config struct {
-	MongoDBUrl string
-	JWTSecret  string
+	MongoDBUrl     string
+	JWTSecret      string
+	DBName         string
+	CollectionName string
 }
 
 func LoadConfig() Config {
@@ -18,7 +20,9 @@ func LoadConfig() Config {
 	}
 
 	return Config{
-		MongoDBUrl: os.Getenv("MONGODB_URL"),
-		JWTSecret:  os.Getenv("JWT_SECRET"),
+		MongoDBUrl:     os.Getenv("MONGODB_URL"),
+		JWTSecret:      os.Getenv("JWT_SECRET"),
+		DBName:         os.Getenv("DB_NAME"),
+		CollectionName: os.Getenv("COLLECTION_NAME"),
 	}
 }
