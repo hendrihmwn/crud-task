@@ -56,3 +56,8 @@ If want to test run `make test`
 2. Copy `.env.example` into `.env`
 3. `npm install`
 4. `npm run dev`
+
+### Login Credential
+username: `admin`
+
+password: `passsword`
