@@ -1,11 +1,11 @@
 package usecase
 
 import (
-	"backend/helper"
-	"backend/model"
 	"context"
 	"errors"
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/hendrihmwn/crud-task-backend/helper"
+	"github.com/hendrihmwn/crud-task-backend/model"
 	"time"
 )
 

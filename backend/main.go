@@ -1,11 +1,11 @@
 package main
 
 import (
-	"backend/handler"
-	"backend/helper"
 	"context"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/hendrihmwn/crud-task-backend/handler"
+	"github.com/hendrihmwn/crud-task-backend/helper"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"log"

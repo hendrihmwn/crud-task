@@ -15,7 +15,7 @@ type TaskListParam struct {
 }
 
 type TaskGetParam struct {
-	ID string `uri:"id"`
+	ID string `uri:"id" json:"id"`
 }
 
 type TaskBodyParam struct {

@@ -1,11 +1,11 @@
 package handler
 
 import (
-	"backend/handler/interfaces"
-	"backend/helper"
-	mongo2 "backend/repository/mongo"
-	"backend/usecase"
 	"github.com/gin-gonic/gin"
+	"github.com/hendrihmwn/crud-task-backend/handler/interfaces"
+	"github.com/hendrihmwn/crud-task-backend/helper"
+	mongo2 "github.com/hendrihmwn/crud-task-backend/repository/mongo"
+	"github.com/hendrihmwn/crud-task-backend/usecase"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

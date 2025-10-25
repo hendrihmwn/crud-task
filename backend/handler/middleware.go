@@ -72,3 +72,10 @@ func FormatValidationError(err error, obj interface{}) string {
 
 	return err.Error()
 }
+
+func MockToken() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.Set("user_id", "test-user")
+		c.Next()
+	}
+}

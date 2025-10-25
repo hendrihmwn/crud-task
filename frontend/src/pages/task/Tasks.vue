@@ -114,7 +114,7 @@ onMounted(() => {
                             <select
                                 v-model="statusValue"
                                 @change="doFilter"
-                                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                                class="w-full bg-white placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
                                 <option value="">All</option>
                                 <option value="backlog">Backlog</option>
                                 <option value="in-progress">In Progress</option>
@@ -134,7 +134,7 @@ onMounted(() => {
                             <select
                                 v-model="sortValue"
                                 @change="doFilter"
-                                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                                class="w-full bg-white placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
                                 <option value="">Default</option>
                                 <option value="created_at">Created At</option>
                                 <option value="title">Title</option>
@@ -154,7 +154,7 @@ onMounted(() => {
                             <select
                                 v-model="orderValue"
                                 @change="doFilter"
-                                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                                class="w-full bg-white placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
                                 <option value="1">Ascending</option>
                                 <option value="-1">Descending</option>
                             </select>
@@ -308,7 +308,7 @@ onMounted(() => {
         
         <div class="flex justify-between items-center px-4 py-3">
             <div class="text-sm text-slate-500">
-            Showing <b>{{ (meta.page * 10) - 9 }}-{{ (meta.limit > meta.total) ? meta.total : meta.limit }}</b> of {{ meta.total}}
+            Showing <b>{{ (meta.page * 10) - 9 }}-{{ (meta.total < (meta.page * 10)) ? meta.total : meta.limit }}</b> of {{ meta.total}}
             </div>
             <div class="flex space-x-1">
             <button @click="prevPage" class="px-3 py-1 min-w-9 min-h-9 text-sm font-normal text-slate-500 bg-white border border-slate-200 rounded hover:bg-slate-50 hover:border-slate-400 transition duration-200 ease">

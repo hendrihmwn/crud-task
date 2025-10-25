@@ -16,7 +16,7 @@ function submit() {
         password: password.value,
     }).then(response => {
         localStorage.setItem('token', response.data.data.token);
-        router.push({name: 'Tasks'});
+        window.location.href = '/';
     }).catch(error => {
         console.log(error.response);
         errorMessage.value = error.response.data.error;

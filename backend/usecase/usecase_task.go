@@ -1,10 +1,10 @@
 package usecase
 
 import (
-	"backend/model"
-	"backend/usecase/interfaces"
 	"context"
 	"errors"
+	"github.com/hendrihmwn/crud-task-backend/model"
+	"github.com/hendrihmwn/crud-task-backend/usecase/interfaces"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )

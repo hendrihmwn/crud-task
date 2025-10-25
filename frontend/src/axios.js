@@ -10,14 +10,6 @@ const axiosClient = axios.create({
   withXSRFToken: true,
 })
 axiosClient.interceptors.request.use(config => {
-  config.headers['Accept'] = '*/*';
-  config.headers['Content-Type'] = 'application/json';
-  config.headers['Access-Control-Allow-Origin'] = '*';
-  config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
-  config.headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization';
-  config.headers['Cache-Control'] = 'no-cache';
-  config.headers['Pragma'] = 'no-cache';
-  config.headers['Access-Control-Allow-Credentials'] = 'true';
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }

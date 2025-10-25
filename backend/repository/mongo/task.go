@@ -1,9 +1,9 @@
 package mongo
 
 import (
-	"backend/model"
 	"context"
 	"errors"
+	"github.com/hendrihmwn/crud-task-backend/model"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"

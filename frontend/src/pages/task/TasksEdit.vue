@@ -85,7 +85,7 @@ const selected = ref(status[0])
         <div v-if="errorMessage" class="mt-4 py-2 px-3 rounded text-white bg-red-400">
             {{errorMessage}}
         </div>
-        <div class="mt-5 sm:mx-auto">
+        <div class="mt-5 sm:mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 w-full mx-auto">
             <form @submit.prevent="submit" class="space-y-6" action="#" method="POST">
                 <div>
                     <label for="title" class="block mb-2 text-sm text-slate-600">Title</label>

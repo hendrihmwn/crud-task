@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"backend/model"
 	"github.com/gin-gonic/gin"
+	"github.com/hendrihmwn/crud-task-backend/model"
 	"net/http"
 )
 
