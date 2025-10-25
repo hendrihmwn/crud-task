@@ -1,0 +1,10 @@
+[build]
+command = "cd backend && go build -o app main.go"
+
+[deploy]
+command = "cd backend && ./app"
+
+[env]
+GIN_MODE = "release"
+MONGODB_URL = "${{ MONGODB_URL }}"
+JWT_SECRET = "${{ JWT_SECRET }}"
