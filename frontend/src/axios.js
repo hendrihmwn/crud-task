@@ -28,7 +28,7 @@ axiosClient.interceptors.request.use(config => {
 axiosClient.interceptors.response.use((response) => {
   return response;
 }, error => {
-  if (error.response && error.response.status === 401) {
+  if (error.response && error.response.status === 401 && error.response.data.error === 'invalid token') {
     localStorage.removeItem('token');
     router.push({name: 'Login'});
   }
