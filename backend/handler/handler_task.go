@@ -8,9 +8,9 @@ import (
 
 func registerTaskHandler(route *gin.Engine) {
 	task := route.Group("/tasks", AuthMiddleware())
-	task.GET("/", InstanceHandler.listTask)
+	task.GET("", InstanceHandler.listTask)
 	task.GET("/:id", InstanceHandler.getTask)
-	task.POST("/", InstanceHandler.createTask)
+	task.POST("", InstanceHandler.createTask)
 	task.PUT("/:id", InstanceHandler.updateTask)
 	task.DELETE("/:id", InstanceHandler.deleteTask)
 }
