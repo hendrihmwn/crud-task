@@ -1,7 +1,7 @@
 <script setup>
 
 import {onMounted, ref, computed} from "vue";
-import axiosClient from "../../axios";
+import axiosClient from "../../api";
 
 const tasks = ref([])
 const errorMessage = ref('');

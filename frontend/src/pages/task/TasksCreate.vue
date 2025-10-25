@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router';
-import axiosClient from "../../axios";
+import axiosClient from "../../api";
 import router from '../../router';
 
 const errorMessage = ref('');

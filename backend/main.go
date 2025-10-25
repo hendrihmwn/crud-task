@@ -25,22 +25,7 @@ func main() {
 	}
 	defer client.Disconnect(ctx)
 
-	// Create a Gin router with default middleware (logger and recovery)
 	r := gin.New()
-
-	//r.Use(func(c *gin.Context) {
-	//	c.Writer.Header().Set("Access-Control-Allow-Origin", "http://localhost:5173")
-	//	c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
-	//	c.Writer.Header().Set("Access-Control-Allow-Headers", "*")
-	//	c.Writer.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS")
-	//
-	//	if c.Request.Method == "OPTIONS" {
-	//		c.AbortWithStatus(204)
-	//		return
-	//	}
-	//
-	//	c.Next()
-	//})
 
 	r.Use(cors.New(cors.Config{
 		AllowOrigins: []string{"http://localhost:5173", "https://frontend-crud-task-production.up.railway.app"},
@@ -55,16 +40,6 @@ func main() {
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 	}))
-
-	//r.Use(cors.New(cors.Config{
-	//	AllowOrigins: []string{"http://localhost:5173",
-	//		"http://127.0.0.1:5173"}, // Vue dev server
-	//	AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-	//	AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
-	//	ExposeHeaders:    []string{"Content-Length"},
-	//	AllowCredentials: true,
-	//	MaxAge:           12 * time.Hour,
-	//}))
 
 	handler.InitHandler(r, client, config)
 
